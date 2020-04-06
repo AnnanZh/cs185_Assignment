@@ -1,7 +1,7 @@
 .header{
-
+    padding: 20px;
+    color: purple;
 }
-
 #main-body{
     display: flex;
 }
