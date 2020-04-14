@@ -1,31 +1,68 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Annan ZHANG's Homepage</title>
-        <link rel = "stylesheet" type = "text/css" href = "style.css">
-    </head>
-    <body>
-        <div class = "header">
-            <h1>Welcome to Annan ZHANG's Homepage</h1>
-            <hr>
-        </div>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Annan ZHANG's Homepage</title>
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+</head>
+<body>
+    <div class = "header">
+        <h1>Welcome to Annan ZHANG's Homepage</h1>
+        <hr>
+    </div>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Homepage')">Home</button>
+        <button class="tablinks" onclick="openTab(event, 'Basketball')">Basketball</button>
+        <button class="tablinks" onclick="openTab(event, 'Gaming')">Gaming</button>
+    </div>
+    <div id="Homepage" class="tabcontent">
+        <h2>About Me</h2>
         <table border = "0" cellpadding = "5" cellspacing = "1">
             <tbody>
                 <tr>
                     <td width = "350" align = "left">
-                        <img src = "images/WechatIMG194.jpeg">
+                        <img src="images/WechatIMG195.jpeg" width="250" height="400">
                     </td>
                     <td width = "420" height = 400>
                         <h2>Annan ZHANG 张安南</h2>
                         <p2>Senior Computer Science Student at UC Santa Barbara</p2>
                         <br>
-                        <p3>E-mail: annanzhang96 AT gmail.com</p3>
+                        <p3>E-mail: annan_zhang AT ucsb.edu</p3>
+                        <br>
+                        <p3>Tel: (805) 689-3849</p3>
+                        <br>
+                        <p3>Address: 6750 El Colegio Road, Apt 302</p3>
                     </td>
             </tbody>
         </table>
-        <hr>
-        <h3>Welcome</h3>
-        <p4>Hi! Welcome to my homepage. I am a student studying computer science at UCSB. My research interest is
-            Machine Learning and Algorithms.</p4>
+    </div>
+
+    <div id="Basketball" class="tabcontent">
+        <img src="images/WechatIMG197.jpeg" width="400" height="250">
+    </div>
+
+    <div id="Gaming" class="tabcontent">
+        <video width="640" height="360" controls autoplay>
+            <source src="images/csgo.mp4" type="video/mp4">
+        </video>
+        <h2>Game Name: CS:GO</h2>
+        <p><a href="https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/">Game Website</a> Free to Play</p>
+    </div>
+    
+        <script>
+            function openTab(evt, cityName){
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+        </script>
     </body>
 </html>
