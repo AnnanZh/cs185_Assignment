@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Annan ZHANG's Homepage</title>
     <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <script defer src = "js/script.js"></script>
+    <script defer src="js/goTop.js"></script>
 </head>
 <body>
     <div class = "header">
@@ -12,7 +14,8 @@
     </div>
     <div class="tab">
         <button class="tablinks" onclick="openTab(event, 'Homepage')">Home</button>
-        <button class="tablinks" onclick="openTab(event, 'Basketball')">Basketball</button>
+        <button class="tablinks" onclick="openTab(event, 'Experience')">Experience</button>
+        <button class="tablinks" onclick="openTab(event, 'Photos')">Photos</button>
         <button class="tablinks" onclick="openTab(event, 'Gaming')">Gaming</button>
     </div>
     <div id="Homepage" class="tabcontent">
@@ -37,8 +40,61 @@
         </table>
     </div>
 
-    <div id="Basketball" class="tabcontent">
-        <img src="images/WechatIMG197.jpeg" width="400" height="250">
+    <div id="Experience" class="tabcontent">
+        <h3>Software Intern</h3>
+        <table border = "0" cellpadding = "5" cellspacing = "1">
+            <tbody>
+                <tr>
+                    <td width = "350" align = "left">
+                        <img src="images/IMG_831301A0F5DB-1.jpeg" width="200" height="300">
+                        <h4> (Chinese Patent)</h4>
+                    </td>
+                    <td width = "600" height = 400>
+                        <p2>I am always looking for chances to put what I have learned into practice. 
+                            During the summer of my freshman year, I joined Shanghai STEP Robotics Co., 
+                            Ltd, a leading robotics public company in China, as a software intern. There, 
+                            I received training and participated in the design of a control system. 
+                            The biggest challenge to me was to design an algorithm based on Matrix deformation 
+                            in Linear Algebra that simulated the rotating trajectory of the six-axis cables. 
+                            By combining the Mathematics that I learned with my C++ programming skills, 
+                            I successfully completed the design of several control units, including all the 
+                            corner cases for the robot. What made me especially proud is that our Simulation 
+                            Control System Device obtained a National Utility Model Patent in China.
+                            (the photo to the left is the Patent)    
+                        </p2>
+                    </td>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="Photos" class="tabcontent">
+        <div class = "parent">
+            <div class = "child">
+                <img src="images/00.jpeg" height = "200px" width="320px">
+            </div>
+            <div class = "child">
+                <img src="images/01.jpeg" height = "200px" width="320px">
+            </div>
+            <div class = "child">
+                <img src="images/02.jpeg" height = "200px" width="320px">
+            </div>
+            <div class = "child">
+                <img src="images/03.jpeg" height = "200px" width="320px">
+            </div>
+            <div class = "child">
+                <img src="images/04.jpeg" height = "200px" width="320px">
+            </div>
+            <div class = "child">
+                <img src="images/05.jpeg" height = "200px" width="320px">
+            </div>
+            <div class = "child">
+                <img src="images/06.jpeg" height = "200px" width="320px">
+            </div>
+            <div class = "child">
+                <img src="images/07.jpeg" height = "200px" width="320px">
+            </div>
+        </div>
+        <button onclick="to_topFunction()" id="goTop" title="Go top">Go top</button>
     </div>
 
     <div id="Gaming" class="tabcontent">
@@ -48,21 +104,21 @@
         <h2>Game Name: CS:GO</h2>
         <p><a href="https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/">Game Website</a> Free to Play</p>
     </div>
-    
-        <script>
-            function openTab(evt, cityName){
-                var i, tabcontent, tablinks;
-                tabcontent = document.getElementsByClassName("tabcontent");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
-                }
-                tablinks = document.getElementsByClassName("tablinks");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                }
-                document.getElementById(cityName).style.display = "block";
-                evt.currentTarget.className += " active";
+    <script>
+        function openTab(evt, evtName){
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
             }
-        </script>
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(evtName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
     </body>
 </html>
